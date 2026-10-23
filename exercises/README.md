@@ -154,11 +154,11 @@ Concrete artefacts live in [`answer-key/`](answer-key/):
 
 | File | Used by |
 |---|---|
-| `fix-fee.patch`, `fix-suspension.patch`, `fix-pagination.patch` | 01, 04, 09 |
-| `prepare-suspension-test.patch` | 04 |
+| `fix-fee.patch`, `fix-suspension.patch`, `fix-pagination.patch` | 01, 04, 08 |
+| `prepare-suspension-test.patch` | 04, 08 |
 | `test_fee_boundaries.py` | 01, 06, 08 |
 | `AGENTS.pruned.md` | 05 |
-| `renewals-spec.md` | 03, 09 |
+| `renewals-spec.md` | 03, 07, 09 |
 | `renewals-reference.patch`, `test_renewals.py` | 09 |
 | `review-diff.patch`, `review-findings.md` | 08 |
 
