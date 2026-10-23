@@ -1,0 +1,11 @@
+diff -ruN a/tests/test_policy.py b/tests/test_policy.py
+--- a/tests/test_policy.py	2026-10-23 12:27:53.866779908 +0200
++++ b/tests/test_policy.py	2026-10-23 12:27:53.901230199 +0200
+@@ -16,7 +16,6 @@
+         self.assertTrue(can_borrow(member, 9))
+         self.assertFalse(can_borrow(member, 10))
+ 
+-    @unittest.skip("flaky on CI, revisit later")
+     def test_suspended_member_cannot_borrow(self):
+         member = Member(id="m3", name="Linus", tier="basic", suspended=True)
+         with self.assertRaises(ValueError):

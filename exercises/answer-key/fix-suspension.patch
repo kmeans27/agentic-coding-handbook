@@ -1,0 +1,12 @@
+diff -ruN a/library/loans.py b/library/loans.py
+--- a/library/loans.py	2026-10-23 12:27:53.858153436 +0200
++++ b/library/loans.py	2026-10-23 12:27:53.899168719 +0200
+@@ -33,6 +33,8 @@
+ 
+ 
+ def borrow(member: Member, book: Book, loans: list[Loan]) -> Loan:
++    if not can_borrow(member, len(open_loans(loans))):
++        raise ValueError(f"{member.id} may not borrow: suspended or at limit")
+     loan = Loan(member_id=member.id, book_id=book.id, due_day=DEFAULT_LOAN_DAYS)
+     loans.append(loan)
+     return loan

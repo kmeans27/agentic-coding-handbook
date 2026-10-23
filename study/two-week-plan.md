@@ -185,6 +185,35 @@ That last step is the whole method in miniature: **produce, then check with fres
 
 ---
 
+## After day 15 · The exercise track
+
+Reading gives you the vocabulary; the [nine labs](../exercises/README.md) give
+you the reps.
+
+They run on a small, deliberately broken Python repository: three bugs the
+tests do not catch, a skipped test hiding a real one, an ambiguous feature
+request, a 4.5-second suite, and a rules file that is mostly noise. Each lab
+ends with an artefact you keep — a boundary test, a spec, a pruned rules file,
+a review report, three loop measurements.
+
+Four of them are **paper-capable**, so you can start before you are back at a
+keyboard:
+
+| Order | Lab | Why now |
+|---|---|---|
+| 1 | [Context budget](../exercises/labs/02-context-budget.md) | You have just read chapter 03; measure the claim. |
+| 2 | [Spec error or execution error?](../exercises/labs/03-spec-vs-execution.md) | The highest-leverage skill, and it needs no execution. |
+| 3 | [Rules-file surgery](../exercises/labs/05-rules-file.md) | You wrote a rules file on day 5. Prune it with the same filters. |
+| 4 | [Adversarial review](../exercises/labs/08-adversarial-review.md) | A diff with two real bugs and four decoys. |
+
+Then, once you can run code, do 01 → 04 → 06 → 07 → 09 in order. The capstone
+assumes the artefacts from the earlier labs.
+
+Do not do all nine in one day. Three sittings of about three hours, with the
+debrief questions written down between them.
+
+---
+
 ## Progress
 
 Tick these off. The point is not completion; it is noticing which day you skipped.

@@ -1,0 +1,26 @@
+diff -ruN a/library/loans.py b/library/loans.py
+--- a/library/loans.py	2026-10-23 12:27:53.858153436 +0200
++++ b/library/loans.py	2026-10-23 12:27:53.900285433 +0200
+@@ -44,5 +44,5 @@
+ 
+ 
+ def paginate(items: list, page: int, size: int = 10) -> list:
+-    start = page * size
++    start = (page - 1) * size
+     return items[start:start + size]
+diff -ruN a/tests/test_loans.py b/tests/test_loans.py
+--- a/tests/test_loans.py	2026-10-23 12:27:53.865333056 +0200
++++ b/tests/test_loans.py	2026-10-23 12:27:53.900300783 +0200
+@@ -26,7 +26,11 @@
+ class PaginationTests(unittest.TestCase):
+     def test_first_page_returns_ten_items(self):
+         items = list(range(1, 26))
+-        self.assertEqual(paginate(items, page=0, size=10), list(range(1, 11)))
++        self.assertEqual(paginate(items, page=1, size=10), list(range(1, 11)))
++
++    def test_second_page_returns_the_next_ten_items(self):
++        items = list(range(1, 26))
++        self.assertEqual(paginate(items, page=2, size=10), list(range(11, 21)))
+ 
+ 
+ if __name__ == "__main__":

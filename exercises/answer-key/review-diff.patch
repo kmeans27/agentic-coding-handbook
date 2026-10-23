@@ -1,0 +1,49 @@
+diff -ruN a/library/loans.py b/library/loans.py
+--- a/library/loans.py	2026-10-23 12:27:53.858153436 +0200
++++ b/library/loans.py	2026-10-23 12:31:15.956175823 +0200
+@@ -7,10 +7,13 @@
+ - From the fourth day late, the fee is 25 cents per day late.
+ - Pages are 1-based: page 1 is the first page.
+ - A suspended member may not borrow (see ``policy.can_borrow``).
++
++This module was lightly reorganised while adding reservations. Public
++behaviour is intended to be unchanged.
+ """
+ 
+-from .models import Book, Loan, Member
+ from .policy import can_borrow
++from .models import Member, Book, Loan
+ 
+ DEFAULT_LOAN_DAYS = 14
+ GRACE_DAYS = 3
+@@ -22,7 +25,7 @@
+ 
+ 
+ def overdue_days(loan: Loan, today: int) -> int:
+-    return max(0, today - loan.due_day)
++    return max(0, today - loan.due_day - 1)
+ 
+ 
+ def overdue_fee(loan: Loan, today: int) -> int:
+@@ -38,6 +41,21 @@
+     return loan
+ 
+ 
++def reserve_book(member: Member, book: Book, reservations: list[dict]) -> dict:
++    """Reserve the next available copy of ``book`` for ``member``."""
++    reservation = {"member_id": member.id, "book_id": book.id}
++    reservations.append(reservation)
++    return reservation
++
++
++def format_fee(cents: int) -> str:
++    """Render a fee in cents as a human-readable string.
++
++    Kept for future reporting work; not wired into anything yet.
++    """
++    return f"${cents // 100}.{cents % 100:02d}"
++
++
+ def return_loan(loan: Loan, today: int) -> Loan:
+     loan.returned_day = today
+     return loan

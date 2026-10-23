@@ -1,0 +1,12 @@
+diff -ruN a/library/loans.py b/library/loans.py
+--- a/library/loans.py	2026-10-23 12:27:53.858153436 +0200
++++ b/library/loans.py	2026-10-23 12:27:53.897831613 +0200
+@@ -29,7 +29,7 @@
+     days = overdue_days(loan, today)
+     if days <= 0:
+         return 0
+-    return max(0, days - GRACE_DAYS + 1) * DAILY_FEE_CENTS
++    return max(0, days - GRACE_DAYS) * DAILY_FEE_CENTS
+ 
+ 
+ def borrow(member: Member, book: Book, loans: list[Loan]) -> Loan:

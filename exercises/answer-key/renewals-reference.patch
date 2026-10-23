@@ -1,0 +1,102 @@
+diff -ruN base/library/loans.py ref/library/loans.py
+--- base/library/loans.py	2026-10-23 12:27:53.858153436 +0200
++++ ref/library/loans.py	2026-10-23 12:30:28.147983830 +0200
+@@ -13,6 +13,7 @@
+ from .policy import can_borrow
+ 
+ DEFAULT_LOAN_DAYS = 14
++MAX_RENEWALS = 2
+ GRACE_DAYS = 3
+ DAILY_FEE_CENTS = 25
+ 
+@@ -32,6 +33,24 @@
+     return max(0, days - GRACE_DAYS + 1) * DAILY_FEE_CENTS
+ 
+ 
++class RenewalError(ValueError):
++    """Raised when a loan cannot be renewed under the current policy."""
++
++
++def renew(loan: Loan, member: Member, today: int) -> Loan:
++    if loan.returned_day is not None:
++        raise RenewalError("returned loans cannot be renewed")
++    if member.suspended:
++        raise RenewalError("suspended members cannot renew")
++    if today > loan.due_day:
++        raise RenewalError("overdue loans cannot be renewed")
++    if loan.renewals >= MAX_RENEWALS:
++        raise RenewalError(f"renewal limit of {MAX_RENEWALS} reached")
++    loan.due_day += DEFAULT_LOAN_DAYS
++    loan.renewals += 1
++    return loan
++
++
+ def borrow(member: Member, book: Book, loans: list[Loan]) -> Loan:
+     loan = Loan(member_id=member.id, book_id=book.id, due_day=DEFAULT_LOAN_DAYS)
+     loans.append(loan)
+diff -ruN base/library/models.py ref/library/models.py
+--- base/library/models.py	2026-10-23 12:27:53.856573856 +0200
++++ ref/library/models.py	2026-10-23 12:30:28.147955381 +0200
+@@ -24,3 +24,4 @@
+     book_id: str
+     due_day: int
+     returned_day: int | None = None
++    renewals: int = 0
+Binary files base/library/__pycache__/__init__.cpython-314.pyc and ref/library/__pycache__/__init__.cpython-314.pyc differ
+Binary files base/library/__pycache__/loans.cpython-314.pyc and ref/library/__pycache__/loans.cpython-314.pyc differ
+Binary files base/library/__pycache__/models.cpython-314.pyc and ref/library/__pycache__/models.cpython-314.pyc differ
+Binary files base/library/__pycache__/policy.cpython-314.pyc and ref/library/__pycache__/policy.cpython-314.pyc differ
+Binary files base/tests/__pycache__/__init__.cpython-314.pyc and ref/tests/__pycache__/__init__.cpython-314.pyc differ
+Binary files base/tests/__pycache__/test_renewals.cpython-314.pyc and ref/tests/__pycache__/test_renewals.cpython-314.pyc differ
+diff -ruN base/tests/test_renewals.py ref/tests/test_renewals.py
+--- base/tests/test_renewals.py	1970-01-01 01:00:00.000000000 +0100
++++ ref/tests/test_renewals.py	2026-10-23 12:30:28.150784198 +0200
+@@ -0,0 +1,48 @@
++import unittest
++
++from library.loans import MAX_RENEWALS, RenewalError, renew
++from library.models import Book, Loan, Member
++
++
++class RenewalTests(unittest.TestCase):
++    def setUp(self):
++        self.member = Member(id="m1", name="Ada", tier="plus")
++        self.book = Book(id="b1", title="Dune")
++        self.loan = Loan(member_id="m1", book_id="b1", due_day=14)
++
++    def test_renewal_extends_from_the_current_due_day(self):
++        renew(self.loan, self.member, today=10)
++        self.assertEqual(self.loan.due_day, 28)
++        self.assertEqual(self.loan.renewals, 1)
++
++    def test_two_renewals_are_allowed(self):
++        renew(self.loan, self.member, today=10)
++        renew(self.loan, self.member, today=20)
++        self.assertEqual(self.loan.due_day, 42)
++        self.assertEqual(self.loan.renewals, 2)
++
++    def test_third_renewal_is_rejected(self):
++        renew(self.loan, self.member, today=10)
++        renew(self.loan, self.member, today=20)
++        with self.assertRaises(RenewalError):
++            renew(self.loan, self.member, today=30)
++        self.assertEqual(self.loan.due_day, 42)
++
++    def test_overdue_loan_cannot_be_renewed(self):
++        with self.assertRaises(RenewalError):
++            renew(self.loan, self.member, today=15)
++        self.assertEqual(self.loan.due_day, 14)
++
++    def test_suspended_member_cannot_renew(self):
++        self.member.suspended = True
++        with self.assertRaises(RenewalError):
++            renew(self.loan, self.member, today=10)
++
++    def test_returned_loan_cannot_be_renewed(self):
++        self.loan.returned_day = 12
++        with self.assertRaises(RenewalError):
++            renew(self.loan, self.member, today=20)
++
++
++if __name__ == "__main__":
++    unittest.main()

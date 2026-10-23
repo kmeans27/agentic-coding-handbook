@@ -6,7 +6,7 @@
 
 **A durable handbook for directing coding agents — and staying the engineer.**
 
-[The 14 principles](#the-fourteen-principles) · [Reading canon](reading/README.md) · [14-day plan](study/two-week-plan.md) · [Checklists](appendix/checklists.md) · [Question bank](study/question-bank.md)
+[The 14 principles](#the-fourteen-principles) · [Reading canon](reading/README.md) · [14-day plan](study/two-week-plan.md) · [Exercises](exercises/README.md) · [Checklists](appendix/checklists.md) · [Question bank](study/question-bank.md)
 
 </div>
 
@@ -30,6 +30,7 @@ It is built from 22 primary sources — Anthropic's engineering write-ups, pract
 |---|---|---|
 | **Two weeks, no ability to code** | [The 14-day plan](study/two-week-plan.md) — reading, reflection and writing only. No keyboard needed. | 45–60 min/day |
 | **A free weekend** | [The canon](reading/README.md), tiers 0–1, then install one skill library and use it on a real task. | ~6 h |
+| **Ready to practise** | [The nine labs](exercises/README.md) — a deliberately broken repo, guided fixes, a full answer key. | 9–10 h |
 | **Ten minutes** | [The fourteen principles](#the-fourteen-principles) below, then [the verification ladder](docs/04-verification.md). | 10 min |
 | **A specific problem** | [Antipatterns](docs/09-antipatterns.md) — symptom → cause → fix. | 5 min |
 
@@ -83,6 +84,7 @@ The important detail is that there are **two** feedback loops, and they are not 
 
 ### Reference
 - [Reading canon](reading/README.md) — 22 sources, annotated, with honest reading times
+- [Exercise track](exercises/README.md) — nine guided labs on a broken repo, with solutions
 - [14-day plan](study/two-week-plan.md) — no-code curriculum with daily prompts
 - [Question bank](study/question-bank.md) — 40 questions for spaced repetition
 - [Checklists](appendix/checklists.md) — pre-flight, definition of done, repo readiness
