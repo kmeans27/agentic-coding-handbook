@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="520" viewBox="0 0 1120 520" role="img" aria-labelledby="t d">
+  <title id="t">Context is the budget</title>
+  <desc id="d">Two stacked bars compare a fresh context with a context after 45 minutes. Failed attempts and verbose tool output consume space that can never help again.</desc>
+
+  <rect width="1120" height="520" rx="18" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <g font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="56" y="58" font-size="22" font-weight="800" fill="#0F172A">Context is the budget</text>
+    <text x="56" y="84" font-size="13.5" fill="#64748B">You do not get more of it by trying harder. Every read, log line and wrong turn is a purchase.</text>
+
+    <!-- axis -->
+    <g font-size="10.5" fill="#94A3B8">
+      <text x="60" y="122">0%</text>
+      <text x="310" y="122" text-anchor="middle">25%</text>
+      <text x="560" y="122" text-anchor="middle">50%</text>
+      <text x="810" y="122" text-anchor="middle">75%</text>
+      <text x="1060" y="122" text-anchor="end">100%</text>
+    </g>
+    <g stroke="#E2E8F0" stroke-width="1">
+      <line x1="310" y1="128" x2="310" y2="268"/>
+      <line x1="560" y1="128" x2="560" y2="268"/>
+      <line x1="810" y1="128" x2="810" y2="268"/>
+      <line x1="1060" y1="128" x2="1060" y2="268"/>
+    </g>
+
+    <!-- bar 1 -->
+    <text x="60" y="150" font-size="12" font-weight="700" fill="#334155">At task start</text>
+    <rect x="60" y="160" width="1000" height="30" rx="7" fill="#F1F5F9" stroke="#E2E8F0"/>
+    <rect x="60" y="160" width="90" height="30" rx="7" fill="#94A3B8"/>
+    <rect x="150" y="160" width="40" height="30" fill="#818CF8"/>
+    <text x="195" y="180" font-size="11.5" fill="#64748B">13% used — the window is practically empty</text>
+
+    <!-- bar 2 -->
+    <text x="60" y="228" font-size="12" font-weight="700" fill="#334155">45 minutes into one task</text>
+    <rect x="60" y="238" width="1000" height="30" rx="7" fill="#F1F5F9" stroke="#E2E8F0"/>
+    <rect x="60" y="238" width="90" height="30" rx="7" fill="#94A3B8"/>
+    <rect x="150" y="238" width="40" height="30" fill="#818CF8"/>
+    <rect x="190" y="238" width="300" height="30" fill="#38BDF8"/>
+    <rect x="490" y="238" width="220" height="30" fill="#2DD4BF"/>
+    <rect x="710" y="238" width="180" height="30" fill="#FBBF24"/>
+    <rect x="890" y="238" width="110" height="30" rx="7" fill="#F87171"/>
+    <text x="1060" y="258" font-size="10.5" font-weight="700" text-anchor="end" fill="#B91C1C">94%</text>
+
+    <!-- annotation -->
+    <text x="60" y="300" font-size="11.5" fill="#B91C1C">The red block is dead weight. Failed attempts can never help again — they only crowd out the instructions that still matter.</text>
+
+    <!-- legend -->
+    <g font-size="11.5" fill="#475569">
+      <rect x="60" y="322" width="11" height="11" rx="2" fill="#94A3B8"/><text x="78" y="332">system prompt + tools</text>
+      <rect x="270" y="322" width="11" height="11" rx="2" fill="#818CF8"/><text x="288" y="332">repo rules</text>
+      <rect x="430" y="322" width="11" height="11" rx="2" fill="#38BDF8"/><text x="448" y="332">files read</text>
+      <rect x="600" y="322" width="11" height="11" rx="2" fill="#2DD4BF"/><text x="618" y="332">tool output</text>
+      <rect x="770" y="322" width="11" height="11" rx="2" fill="#FBBF24"/><text x="788" y="332">conversation</text>
+      <rect x="940" y="322" width="11" height="11" rx="2" fill="#F87171"/><text x="958" y="332">failed attempts</text>
+    </g>
+
+    <!-- levers -->
+    <g>
+      <rect x="56" y="368" width="320" height="132" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="80" y="398" font-size="13" font-weight="800" fill="#0F172A">CLEAR</text>
+      <text x="80" y="422" font-size="12" fill="#475569">New task, new session.</text>
+      <text x="80" y="440" font-size="12" fill="#475569">Cheapest possible reset.</text>
+      <text x="80" y="470" font-size="11.5" fill="#94A3B8">Between unrelated work.</text>
+    </g>
+    <g>
+      <rect x="400" y="368" width="320" height="132" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="424" y="398" font-size="13" font-weight="800" fill="#0F172A">COMPACT</text>
+      <text x="424" y="422" font-size="12" fill="#475569">Summarise, keep the decisions.</text>
+      <text x="424" y="440" font-size="12" fill="#475569">Name what must survive.</text>
+      <text x="424" y="470" font-size="11.5" fill="#94A3B8">Same task, long session.</text>
+    </g>
+    <g>
+      <rect x="744" y="368" width="320" height="132" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="768" y="398" font-size="13" font-weight="800" fill="#0F172A">DELEGATE</text>
+      <text x="768" y="422" font-size="12" fill="#475569">Send the search away.</text>
+      <text x="768" y="440" font-size="12" fill="#475569">Get back a summary only.</text>
+      <text x="768" y="470" font-size="11.5" fill="#94A3B8">Investigation, not editing.</text>
+    </g>
+  </g>
+</svg>

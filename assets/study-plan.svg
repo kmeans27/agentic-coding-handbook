@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="470" viewBox="0 0 1120 470" role="img" aria-labelledby="t d">
+  <title id="t">The 14-day study plan</title>
+  <desc id="d">A calendar of fourteen sessions grouped into five phases: foundations, mechanics, systems, judgment, consolidate.</desc>
+
+  <rect width="1120" height="470" rx="18" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <g font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="48" y="50" font-size="21" font-weight="800" fill="#0F172A">Fourteen days, no keyboard required</text>
+    <text x="48" y="74" font-size="12.5" fill="#64748B">45–60 minutes a day. Read, reflect, write. The muscle you are building is judgment, not typing speed.</text>
+
+    <!-- row 1 -->
+    <g>
+      <rect x="48" y="100" width="140" height="130" rx="10" fill="#EEF2FF" stroke="#C7D2FE"/>
+      <rect x="48" y="100" width="140" height="4" rx="2" fill="#4F46E5"/>
+      <text x="64" y="126" font-size="9" font-weight="700" letter-spacing="1" fill="#6366F1">DAY 01 · FOUNDATIONS</text>
+      <text x="64" y="152" font-size="13" font-weight="700" fill="#0F172A">Read the canon</text>
+      <text x="64" y="176" font-size="10.5" fill="#475569">Three sources.</text>
+      <text x="64" y="192" font-size="10.5" fill="#475569">No note-taking yet.</text>
+      <text x="64" y="216" font-size="10" fill="#818CF8">45 min</text>
+    </g>
+    <g>
+      <rect x="200" y="100" width="140" height="130" rx="10" fill="#EEF2FF" stroke="#C7D2FE"/>
+      <text x="216" y="126" font-size="9" font-weight="700" letter-spacing="1" fill="#6366F1">DAY 02</text>
+      <text x="216" y="152" font-size="13" font-weight="700" fill="#0F172A">Context</text>
+      <text x="216" y="176" font-size="10.5" fill="#475569">Why quality falls</text>
+      <text x="216" y="192" font-size="10.5" fill="#475569">as the window fills.</text>
+      <text x="216" y="216" font-size="10" fill="#818CF8">50 min</text>
+    </g>
+    <g>
+      <rect x="352" y="100" width="140" height="130" rx="10" fill="#EEF2FF" stroke="#C7D2FE"/>
+      <text x="368" y="126" font-size="9" font-weight="700" letter-spacing="1" fill="#6366F1">DAY 03</text>
+      <text x="368" y="152" font-size="13" font-weight="700" fill="#0F172A">Verification</text>
+      <text x="368" y="176" font-size="10.5" fill="#475569">The ladder.</text>
+      <text x="368" y="192" font-size="10.5" fill="#475569">Design your check.</text>
+      <text x="368" y="216" font-size="10" fill="#818CF8">50 min</text>
+    </g>
+    <g>
+      <rect x="504" y="100" width="140" height="130" rx="10" fill="#F0F9FF" stroke="#BAE6FD"/>
+      <rect x="504" y="100" width="140" height="4" rx="2" fill="#0284C7"/>
+      <text x="520" y="126" font-size="9" font-weight="700" letter-spacing="1" fill="#0284C7">DAY 04 · MECHANICS</text>
+      <text x="520" y="152" font-size="13" font-weight="700" fill="#0F172A">The loop</text>
+      <text x="520" y="176" font-size="10.5" fill="#475569">Specify, execute,</text>
+      <text x="520" y="192" font-size="10.5" fill="#475569">verify, commit.</text>
+      <text x="520" y="216" font-size="10" fill="#38BDF8">50 min</text>
+    </g>
+    <g>
+      <rect x="656" y="100" width="140" height="130" rx="10" fill="#F0F9FF" stroke="#BAE6FD"/>
+      <text x="672" y="126" font-size="9" font-weight="700" letter-spacing="1" fill="#0284C7">DAY 05</text>
+      <text x="672" y="152" font-size="13" font-weight="700" fill="#0F172A">Your rules file</text>
+      <text x="672" y="176" font-size="10.5" fill="#475569">Cut it in half.</text>
+      <text x="672" y="192" font-size="10.5" fill="#475569">Hooks over prose.</text>
+      <text x="672" y="216" font-size="10" fill="#38BDF8">45 min</text>
+    </g>
+    <g>
+      <rect x="808" y="100" width="140" height="130" rx="10" fill="#F0F9FF" stroke="#BAE6FD"/>
+      <text x="824" y="126" font-size="9" font-weight="700" letter-spacing="1" fill="#0284C7">DAY 06</text>
+      <text x="824" y="152" font-size="13" font-weight="700" fill="#0F172A">Tooling audit</text>
+      <text x="824" y="176" font-size="10.5" fill="#475569">How fast is your</text>
+      <text x="824" y="192" font-size="10.5" fill="#475569">feedback loop?</text>
+      <text x="824" y="216" font-size="10" fill="#38BDF8">50 min</text>
+    </g>
+    <g>
+      <rect x="960" y="100" width="112" height="130" rx="10" fill="#F0FDFA" stroke="#99F6E4"/>
+      <rect x="960" y="100" width="112" height="4" rx="2" fill="#0F766E"/>
+      <text x="976" y="126" font-size="9" font-weight="700" letter-spacing="1" fill="#0F766E">DAY 07 · SYSTEMS</text>
+      <text x="976" y="152" font-size="13" font-weight="700" fill="#0F172A">Spec a task</text>
+      <text x="976" y="176" font-size="10.5" fill="#475569">Write it before</text>
+      <text x="976" y="192" font-size="10.5" fill="#475569">you touch a tool.</text>
+      <text x="976" y="216" font-size="10" fill="#14B8A6">55 min</text>
+    </g>
+
+    <!-- row 2 -->
+    <g>
+      <rect x="48" y="248" width="140" height="130" rx="10" fill="#F0FDFA" stroke="#99F6E4"/>
+      <text x="64" y="274" font-size="9" font-weight="700" letter-spacing="1" fill="#0F766E">DAY 08</text>
+      <text x="64" y="300" font-size="13" font-weight="700" fill="#0F172A">Skills</text>
+      <text x="64" y="324" font-size="10.5" fill="#475569">Encode a workflow</text>
+      <text x="64" y="340" font-size="10.5" fill="#475569">you repeat weekly.</text>
+      <text x="64" y="364" font-size="10" fill="#14B8A6">60 min</text>
+    </g>
+    <g>
+      <rect x="200" y="248" width="140" height="130" rx="10" fill="#F0FDFA" stroke="#99F6E4"/>
+      <text x="216" y="274" font-size="9" font-weight="700" letter-spacing="1" fill="#0F766E">DAY 09</text>
+      <text x="216" y="300" font-size="13" font-weight="700" fill="#0F172A">Worktrees</text>
+      <text x="216" y="324" font-size="10.5" fill="#475569">Isolate parallel</text>
+      <text x="216" y="340" font-size="10.5" fill="#475569">work properly.</text>
+      <text x="216" y="364" font-size="10" fill="#14B8A6">45 min</text>
+    </g>
+    <g>
+      <rect x="352" y="248" width="140" height="130" rx="10" fill="#FFFBEB" stroke="#FDE68A"/>
+      <rect x="352" y="248" width="140" height="4" rx="2" fill="#D97706"/>
+      <text x="368" y="274" font-size="9" font-weight="700" letter-spacing="1" fill="#B45309">DAY 10 · JUDGMENT</text>
+      <text x="368" y="300" font-size="13" font-weight="700" fill="#0F172A">Review honestly</text>
+      <text x="368" y="324" font-size="10.5" fill="#475569">Writer/reviewer.</text>
+      <text x="368" y="340" font-size="10.5" fill="#475569">Gaps, not taste.</text>
+      <text x="368" y="364" font-size="10" fill="#F59E0B">50 min</text>
+    </g>
+    <g>
+      <rect x="504" y="248" width="140" height="130" rx="10" fill="#FFFBEB" stroke="#FDE68A"/>
+      <text x="520" y="274" font-size="9" font-weight="700" letter-spacing="1" fill="#B45309">DAY 11</text>
+      <text x="520" y="300" font-size="13" font-weight="700" fill="#0F172A">Measure</text>
+      <text x="520" y="324" font-size="10.5" fill="#475569">Cycle time, rework,</text>
+      <text x="520" y="340" font-size="10.5" fill="#475569">escaped defects.</text>
+      <text x="520" y="364" font-size="10" fill="#F59E0B">45 min</text>
+    </g>
+    <g>
+      <rect x="656" y="248" width="140" height="130" rx="10" fill="#FFFBEB" stroke="#FDE68A"/>
+      <text x="672" y="274" font-size="9" font-weight="700" letter-spacing="1" fill="#B45309">DAY 12</text>
+      <text x="672" y="300" font-size="13" font-weight="700" fill="#0F172A">Cognitive debt</text>
+      <text x="672" y="324" font-size="10.5" fill="#475569">What can you still</text>
+      <text x="672" y="340" font-size="10.5" fill="#475569">explain unaided?</text>
+      <text x="672" y="364" font-size="10" fill="#F59E0B">40 min</text>
+    </g>
+    <g>
+      <rect x="808" y="248" width="140" height="130" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <rect x="808" y="248" width="140" height="4" rx="2" fill="#475569"/>
+      <text x="824" y="274" font-size="9" font-weight="700" letter-spacing="1" fill="#475569">DAY 13 · CONSOLIDATE</text>
+      <text x="824" y="300" font-size="13" font-weight="700" fill="#0F172A">Teach it back</text>
+      <text x="824" y="324" font-size="10.5" fill="#475569">Explain it without</text>
+      <text x="824" y="340" font-size="10.5" fill="#475569">the repo open.</text>
+      <text x="824" y="364" font-size="10" fill="#64748B">40 min</text>
+    </g>
+    <g>
+      <rect x="960" y="248" width="112" height="130" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="976" y="274" font-size="9" font-weight="700" letter-spacing="1" fill="#475569">DAY 14</text>
+      <text x="976" y="300" font-size="13" font-weight="700" fill="#0F172A">Your kit</text>
+      <text x="976" y="324" font-size="10.5" fill="#475569">One page of</text>
+      <text x="976" y="340" font-size="10.5" fill="#475569">rules you keep.</text>
+      <text x="976" y="364" font-size="10" fill="#64748B">30 min</text>
+    </g>
+
+    <text x="48" y="420" font-size="11.5" fill="#475569">Each day ends with one written sentence: “the thing I would have got wrong before today is …”</text>
+    <text x="48" y="442" font-size="11.5" fill="#94A3B8">Full instructions, prompts and the question bank: study/two-week-plan.md</text>
+  </g>
+</svg>

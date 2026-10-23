@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="540" viewBox="0 0 1120 540" role="img" aria-labelledby="t d">
+  <title id="t">Parallelism is isolation, review is freshness</title>
+  <desc id="d">Left: separate git worktrees per task, merged through main. Right: a writer session and an independent reviewer session with fresh context.</desc>
+
+  <defs>
+    <marker id="p1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94A3B8"/>
+    </marker>
+    <marker id="p2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4F46E5"/>
+    </marker>
+    <marker id="p3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <rect width="1120" height="540" rx="18" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <g font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="48" y="52" font-size="21" font-weight="800" fill="#0F172A">Parallelism is isolation. Review is freshness.</text>
+    <text x="48" y="78" font-size="13" fill="#64748B">Two different reasons to open a second session — do not mix them up.</text>
+
+    <!-- LEFT -->
+    <text x="48" y="118" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#94A3B8">A · MANY TASKS, ONE SHARED STATE</text>
+
+    <g>
+      <rect x="48" y="136" width="150" height="150" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="66" y="162" font-size="11" font-weight="700" fill="#64748B">WORKTREE 1</text>
+      <text x="66" y="186" font-size="12.5" font-weight="600" fill="#0F172A">feat/auth</text>
+      <text x="66" y="208" font-size="11" fill="#475569">agent: token refresh</text>
+      <text x="66" y="226" font-size="11" fill="#475569">own files, own branch</text>
+      <circle cx="66" cy="258" r="4" fill="#22C55E"/>
+      <text x="78" y="262" font-size="10.5" fill="#64748B">tests green</text>
+    </g>
+    <g>
+      <rect x="214" y="136" width="150" height="150" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="232" y="162" font-size="11" font-weight="700" fill="#64748B">WORKTREE 2</text>
+      <text x="232" y="186" font-size="12.5" font-weight="600" fill="#0F172A">fix/export</text>
+      <text x="232" y="208" font-size="11" fill="#475569">agent: CSV encoding</text>
+      <text x="232" y="226" font-size="11" fill="#475569">own files, own branch</text>
+      <circle cx="232" cy="258" r="4" fill="#F59E0B"/>
+      <text x="244" y="262" font-size="10.5" fill="#64748B">in progress</text>
+    </g>
+    <g>
+      <rect x="380" y="136" width="150" height="150" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="398" y="162" font-size="11" font-weight="700" fill="#64748B">WORKTREE 3</text>
+      <text x="398" y="186" font-size="12.5" font-weight="600" fill="#0F172A">chore/deps</text>
+      <text x="398" y="208" font-size="11" fill="#475569">agent: upgrade pass</text>
+      <text x="398" y="226" font-size="11" fill="#475569">own files, own branch</text>
+      <circle cx="398" cy="258" r="4" fill="#94A3B8"/>
+      <text x="410" y="262" font-size="10.5" fill="#64748B">queued</text>
+    </g>
+
+    <!-- merge to main -->
+    <path d="M 123 290 L 123 330 L 289 330" fill="none" stroke="#94A3B8" stroke-width="1.8"/>
+    <path d="M 289 290 L 289 330" fill="none" stroke="#94A3B8" stroke-width="1.8"/>
+    <path d="M 455 290 L 455 330 L 289 330" fill="none" stroke="#94A3B8" stroke-width="1.8"/>
+    <line x1="289" y1="330" x2="289" y2="356" stroke="#94A3B8" stroke-width="1.8" marker-end="url(#p1)"/>
+
+    <rect x="196" y="362" width="186" height="40" rx="10" fill="#0F172A"/>
+    <text x="289" y="387" font-size="12" font-weight="600" text-anchor="middle" fill="#F8FAFC">main · one merge at a time</text>
+
+    <text x="48" y="430" font-size="11.5" fill="#B91C1C">✗ Never point two agents at the same checkout.</text>
+    <text x="48" y="450" font-size="11.5" fill="#475569">They will overwrite each other and you will debug a ghost.</text>
+
+    <!-- divider -->
+    <line x1="566" y1="110" x2="566" y2="472" stroke="#E2E8F0" stroke-width="1.5"/>
+
+    <!-- RIGHT -->
+    <text x="604" y="118" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#94A3B8">B · ONE TASK, TWO MINDS</text>
+
+    <g>
+      <rect x="604" y="136" width="210" height="120" rx="12" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+      <text x="624" y="162" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#6366F1">WRITER</text>
+      <text x="624" y="188" font-size="13" font-weight="700" fill="#0F172A">Built the change</text>
+      <text x="624" y="210" font-size="11" fill="#475569">Has the reasoning,</text>
+      <text x="624" y="226" font-size="11" fill="#475569">the dead ends and</text>
+      <text x="624" y="242" font-size="11" fill="#475569">a stake in the answer.</text>
+    </g>
+
+    <g>
+      <rect x="872" y="136" width="200" height="120" rx="12" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.5"/>
+      <text x="892" y="162" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#059669">REVIEWER</text>
+      <text x="892" y="188" font-size="13" font-weight="700" fill="#0F172A">Started fresh</text>
+      <text x="892" y="210" font-size="11" fill="#475569">Sees the diff,</text>
+      <text x="892" y="226" font-size="11" fill="#475569">the plan and the</text>
+      <text x="892" y="242" font-size="11" fill="#475569">requirements only.</text>
+    </g>
+
+    <line x1="814" y1="178" x2="864" y2="178" stroke="#4F46E5" stroke-width="2" marker-end="url(#p2)"/>
+    <text x="839" y="168" font-size="9.5" font-weight="600" text-anchor="middle" fill="#4F46E5">diff</text>
+    <text x="839" y="196" font-size="9.5" font-weight="600" text-anchor="middle" fill="#4F46E5">+ plan</text>
+
+    <path d="M 972 262 L 972 300 L 709 300 L 709 262" fill="none" stroke="#059669" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#p3)"/>
+    <text x="840" y="318" font-size="10.5" font-weight="600" text-anchor="middle" fill="#047857">findings, not style opinions</text>
+
+    <text x="604" y="362" font-size="11.5" fill="#475569">A reviewer with the writer's context inherits the writer's blind spots.</text>
+    <text x="604" y="382" font-size="11.5" fill="#475569">Fresh context is the cheapest objectivity you can buy.</text>
+
+    <rect x="604" y="406" width="468" height="66" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="624" y="430" font-size="11.5" font-weight="700" fill="#334155">Same principle, other direction</text>
+    <text x="624" y="450" font-size="11" fill="#475569">Two sessions writing the same file is isolation failure.</text>
+    <text x="624" y="466" font-size="11" fill="#475569">Two sessions checking the same file is quality.</text>
+  </g>
+</svg>

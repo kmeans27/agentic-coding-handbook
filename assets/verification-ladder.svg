@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" role="img" aria-labelledby="t d">
+  <title id="t">The verification ladder</title>
+  <desc id="d">Six levels of evidence, from the agent claiming success at the bottom to observing the running system plus adversarial review at the top.</desc>
+
+  <rect width="1000" height="560" rx="18" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <g font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="48" y="54" font-size="22" font-weight="800" fill="#0F172A">The verification ladder</text>
+    <text x="48" y="80" font-size="13.5" fill="#64748B">Climb as high as the change deserves. Never lie to yourself about which rung you are on.</text>
+
+    <text x="48" y="120" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#94A3B8">WHAT YOU ACTUALLY KNOW</text>
+    <text x="790" y="120" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#94A3B8">STRENGTH</text>
+
+    <!-- row 6 -->
+    <g>
+      <rect x="48" y="136" width="904" height="52" rx="10" fill="#F0FDF4"/>
+      <circle cx="76" cy="162" r="12" fill="#059669"/>
+      <text x="76" y="166" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">6</text>
+      <text x="102" y="158" font-size="13.5" font-weight="700" fill="#0F172A">Observed in the running system — and attacked</text>
+      <text x="102" y="176" font-size="11.5" fill="#475569">You watched the real thing work, and a fresh reviewer tried to break it.</text>
+      <g>
+        <rect x="790" y="152" width="20" height="20" rx="4" fill="#059669"/><rect x="816" y="152" width="20" height="20" rx="4" fill="#059669"/>
+        <rect x="842" y="152" width="20" height="20" rx="4" fill="#059669"/><rect x="868" y="152" width="20" height="20" rx="4" fill="#059669"/>
+        <rect x="894" y="152" width="20" height="20" rx="4" fill="#059669"/><rect x="920" y="152" width="20" height="20" rx="4" fill="#059669"/>
+      </g>
+    </g>
+
+    <!-- row 5 -->
+    <g>
+      <rect x="48" y="194" width="904" height="52" rx="10" fill="#F7FEE7"/>
+      <circle cx="76" cy="220" r="12" fill="#65A30D"/>
+      <text x="76" y="224" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">5</text>
+      <text x="102" y="216" font-size="13.5" font-weight="700" fill="#0F172A">End-to-end test through the real wiring</text>
+      <text x="102" y="234" font-size="11.5" fill="#475569">Routes, database, auth and serialisation are all exercised together.</text>
+      <g>
+        <rect x="790" y="210" width="20" height="20" rx="4" fill="#65A30D"/><rect x="816" y="210" width="20" height="20" rx="4" fill="#65A30D"/>
+        <rect x="842" y="210" width="20" height="20" rx="4" fill="#65A30D"/><rect x="868" y="210" width="20" height="20" rx="4" fill="#65A30D"/>
+        <rect x="894" y="210" width="20" height="20" rx="4" fill="#65A30D"/><rect x="920" y="210" width="20" height="20" rx="4" fill="#E2E8F0"/>
+      </g>
+    </g>
+
+    <!-- row 4 -->
+    <g>
+      <rect x="48" y="252" width="904" height="52" rx="10" fill="#FEFCE8"/>
+      <circle cx="76" cy="278" r="12" fill="#CA8A04"/>
+      <text x="76" y="282" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">4</text>
+      <text x="102" y="274" font-size="13.5" font-weight="700" fill="#0F172A">Unit tests and a type check pass</text>
+      <text x="102" y="292" font-size="11.5" fill="#475569">Logic and contracts hold in isolation. Integration is still a guess.</text>
+      <g>
+        <rect x="790" y="268" width="20" height="20" rx="4" fill="#CA8A04"/><rect x="816" y="268" width="20" height="20" rx="4" fill="#CA8A04"/>
+        <rect x="842" y="268" width="20" height="20" rx="4" fill="#CA8A04"/><rect x="868" y="268" width="20" height="20" rx="4" fill="#E2E8F0"/>
+        <rect x="894" y="268" width="20" height="20" rx="4" fill="#E2E8F0"/><rect x="920" y="268" width="20" height="20" rx="4" fill="#E2E8F0"/>
+      </g>
+    </g>
+
+    <!-- row 3 -->
+    <g>
+      <rect x="48" y="310" width="904" height="52" rx="10" fill="#FFF7ED"/>
+      <circle cx="76" cy="336" r="12" fill="#EA580C"/>
+      <text x="76" y="340" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+      <text x="102" y="332" font-size="13.5" font-weight="700" fill="#0F172A">It compiles and the linter is quiet</text>
+      <text x="102" y="350" font-size="11.5" fill="#475569">Syntax and style. Almost no information about behaviour.</text>
+      <g>
+        <rect x="790" y="326" width="20" height="20" rx="4" fill="#EA580C"/><rect x="816" y="326" width="20" height="20" rx="4" fill="#EA580C"/>
+        <rect x="842" y="326" width="20" height="20" rx="4" fill="#E2E8F0"/><rect x="868" y="326" width="20" height="20" rx="4" fill="#E2E8F0"/>
+        <rect x="894" y="326" width="20" height="20" rx="4" fill="#E2E8F0"/><rect x="920" y="326" width="20" height="20" rx="4" fill="#E2E8F0"/>
+      </g>
+    </g>
+
+    <!-- row 2 -->
+    <g>
+      <rect x="48" y="368" width="904" height="52" rx="10" fill="#FEF2F2"/>
+      <circle cx="76" cy="394" r="12" fill="#DC2626"/>
+      <text x="76" y="398" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">2</text>
+      <text x="102" y="390" font-size="13.5" font-weight="700" fill="#0F172A">The diff looks plausible</text>
+      <text x="102" y="408" font-size="11.5" fill="#475569">You read it and hoped. This is where most incidents are born.</text>
+      <g>
+        <rect x="790" y="384" width="20" height="20" rx="4" fill="#DC2626"/><rect x="816" y="384" width="20" height="20" rx="4" fill="#E2E8F0"/>
+        <rect x="842" y="384" width="20" height="20" rx="4" fill="#E2E8F0"/><rect x="868" y="384" width="20" height="20" rx="4" fill="#E2E8F0"/>
+        <rect x="894" y="384" width="20" height="20" rx="4" fill="#E2E8F0"/><rect x="920" y="384" width="20" height="20" rx="4" fill="#E2E8F0"/>
+      </g>
+    </g>
+
+    <!-- row 1 -->
+    <g>
+      <rect x="48" y="426" width="904" height="52" rx="10" fill="#FEF2F2"/>
+      <circle cx="76" cy="452" r="12" fill="#991B1B"/>
+      <text x="76" y="456" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+      <text x="102" y="448" font-size="13.5" font-weight="700" fill="#0F172A">The agent says it is done</text>
+      <text x="102" y="466" font-size="11.5" fill="#475569">A claim. Not evidence. Costs nothing to produce and means nothing.</text>
+      <g>
+        <rect x="790" y="442" width="20" height="20" rx="4" fill="#991B1B"/><rect x="816" y="442" width="20" height="20" rx="4" fill="#E2E8F0"/>
+        <rect x="842" y="442" width="20" height="20" rx="4" fill="#E2E8F0"/><rect x="868" y="442" width="20" height="20" rx="4" fill="#E2E8F0"/>
+        <rect x="894" y="442" width="20" height="20" rx="4" fill="#E2E8F0"/><rect x="920" y="442" width="20" height="20" rx="4" fill="#E2E8F0"/>
+      </g>
+    </g>
+
+    <text x="48" y="512" font-size="12" fill="#475569">Most production incidents live between rungs 2 and 4 — a green build and a nice-looking diff are not proof.</text>
+    <text x="48" y="532" font-size="12" fill="#475569">Rule of thumb: the effort you spend verifying should scale with the cost of being wrong, not with the effort of writing.</text>
+  </g>
+</svg>
